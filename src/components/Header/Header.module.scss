@@ -1,0 +1,22 @@
+.header {
+  height: 77px;
+  width: 1392px;
+  border: 0px;
+  border-radius: 0 0 20px 20px;
+  // background-color: #ad87ff;
+  background-image: url(../../assets/img/gartic.png);
+  box-shadow: 5px 10px 3px rgba($color: #000000, $alpha: 0.25);
+  align-self: center;
+  text-align: center;
+  z-index: 2;
+  cursor: pointer;
+  h1 {
+    font-weight: 500;
+    letter-spacing: 5px;
+    margin: 10px;
+  }
+
+  @media (max-width: 1430px) {
+    width: 94%;
+  }
+}

@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', Roboto, system-ui, Tahoma, sans-serif;
+}
+
+body {
+  background-color: #892cff;
+}
+
+.wrapper {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.canvas {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  // opacity: 0.4;
+}
+
+.background {
+  position: fixed;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  &::before {
+    content: '';
+    background-image: url('../assets/img/textura.png');
+    width: 200%;
+    height: 200%;
+    z-index: 0;
+    display: block;
+    position: absolute;
+    left: 60%;
+    top: 40%;
+    opacity: 0.3;
+    transform: translate(-50%, -50%) rotate(345deg);
+  }
+}
+.create-word {
+  display: flex;
+  width: 425px;
+  height: 167px;
+  background-color: #ad87ff;
+  border-radius: 15px;
+  box-shadow: 8px 10px 3px rgba($color: #000000, $alpha: 0.25);
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  button {
+    width: 300px;
+    height: 53px;
+    border-radius: 30px;
+    background-color: #d9d9d9;
+    border: 1px solid black;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 2px;
+    @media (max-width: 1050px) {
+      width: 80%;
+    }
+  }
+  input {
+    width: 250px;
+    height: 40px;
+    border: 0px;
+    border-radius: 15px;
+    padding: 5px;
+    font-size: 19px;
+    letter-spacing: 1px;
+    &::placeholder {
+      text-align: center;
+    }
+
+    @media (max-width: 1050px) {
+      width: 80%;
+    }
+  }
+
+  p {
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+
+  @media (max-width: 1750px) {
+    height: 230px;
+  }
+
+  @media (max-width: 1320px) {
+    width: 30vw;
+  }
+  @media (max-width: 650px) {
+    width: 100%;
+  }
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 60px;
+  z-index: 2;
+
+  @media (max-width: 1750px) {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @media (max-width: 1750px) {
+    flex-direction: row;
+  }
+  @media (max-width: 650px) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 2px;
+  }
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}

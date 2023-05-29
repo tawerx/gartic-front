@@ -1,0 +1,40 @@
+.connect_to_room {
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 400px;
+  align-self: center;
+  background-color: #ad87ff;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  padding: 10px;
+  z-index: 2;
+
+  span {
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  &_nickname {
+    input {
+      border: 0px;
+      border-radius: 5px;
+      width: 150px;
+      height: 25px;
+      padding-left: 5px;
+    }
+  }
+
+  &_button {
+    button {
+      width: 70px;
+      height: 30px;
+      border: 0px;
+      border-radius: 5px;
+      background-color: #7c7c7c;
+      color: white;
+      cursor: pointer;
+    }
+  }
+}
