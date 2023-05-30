@@ -10,6 +10,10 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
+
+  @media (max-width: 600px) {
+    width: 90vw;
+  }
 }
 
 .joinBlock_title {
@@ -21,12 +25,16 @@
 .joinBlock_nick {
   input {
     border: 0px;
-    height: 25px;
+    height: 30px;
     border-radius: 5px;
     overflow-x: auto;
     cursor: pointer;
     padding: 5px;
     font-size: 19px;
+
+    @media (max-width: 415px) {
+      font-size: 16px;
+    }
   }
 }
 
@@ -44,5 +52,9 @@
     background-color: rgb(81, 81, 81);
     color: white;
     cursor: pointer;
+
+    @media (max-width: 415px) {
+      height: 45px;
+    }
   }
 }
